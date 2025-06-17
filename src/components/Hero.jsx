@@ -56,7 +56,7 @@ const Hero = () => {
     };
 
     return ( 
-        <div className='overflow-hidden py-8 flex flex-col gap-5'>
+        <div className='overflow-hidden py-5 flex flex-col gap-2'>
             <Nav/>
             
             {/* Main hero part */}

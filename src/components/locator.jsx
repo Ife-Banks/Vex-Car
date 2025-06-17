@@ -44,12 +44,12 @@ const Locator = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={containerVariants}
-            className='text-black flex gap-10 w-[75%] mx-auto p-5 m-0 shadow-[0px_6px_12px_0px_rgba(19,94,172,0.12)] rounded-xl bg-white'
+            className='text-black flex gap-10 w-[75%] mx-auto p-2 m-0 shadow-[0px_6px_12px_0px_rgba(19,94,172,0.12)] rounded-xl bg-white justify-between'
         >
             {/* Location selector */}
             <motion.div 
                 variants={itemVariants}
-                className='flex h-10 items-center gap-3 w-[23%]'
+                className='flex h-10 items-center gap-3 w-[20%]'
             >
                 <motion.img 
                     src={locator} 
@@ -66,7 +66,7 @@ const Locator = () => {
             {/* Pickup date */}
             <motion.div 
                 variants={itemVariants}
-                className='flex h-10 items-center gap-3 w-[23%] border-l-2 border-l-[#ACACAC] pl-3'
+                className='flex h-10 items-center gap-3 w-[20%] border-l-2 border-l-[#ACACAC] pl-3'
             >
                 <motion.img 
                     src={calendar} 
@@ -83,7 +83,7 @@ const Locator = () => {
             {/* Return date */}
             <motion.div 
                 variants={itemVariants}
-                className='flex h-10 items-center gap-3 w-[23%] border-l-2 border-l-[#ACACAC] pl-3'
+                className='flex h-10 items-center gap-3 w-[20%] border-l-2 border-l-[#ACACAC] pl-3'
             >
                 <motion.img 
                     src={calendar} 
