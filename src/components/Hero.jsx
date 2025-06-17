@@ -56,7 +56,7 @@ const Hero = () => {
     };
 
     return ( 
-        <div className='overflow-hidden py-8'>
+        <div className='overflow-hidden py-8 flex flex-col gap-5'>
             <Nav/>
             
             {/* Main hero part */}
@@ -69,23 +69,23 @@ const Hero = () => {
                 {/* Text area */}
                 <motion.div 
                     variants={containerVariants}
-                    className='w-[30%] flex p-1 -mt-5'
+                    className='w-[35%] flex p-1 -mt-5'
                 >
-                    <motion.div variants={itemVariants}>
+                    <motion.div variants={itemVariants} className='w-10'>
                         <LazyLoadImage 
                             src={z} 
                             alt="Decoration" 
-                            className='h-6 mt-3'
+                            className='h-6  mt-3 '
                             effect="opacity"
                         />
                     </motion.div>
                     
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col '>
                         <motion.div 
                             variants={itemVariants}
-                            className='flex'
+                            className='flex '
                         > 
-                            <h1 className='text-[#242424] font-semibold text-5xl'>
+                            <h1 className='text-[#242424] font-semibold text-5xl font-space'>
                                 Find, book and 
                             </h1>
                             <LazyLoadImage 
@@ -100,7 +100,7 @@ const Hero = () => {
                             variants={itemVariants}
                             className='flex gap-2'
                         >
-                            <p className='text-[#242424] font-semibold text-5xl'>
+                            <p className='text-[#242424] font-semibold text-5xl font-space'>
                                 rent a car
                             </p> 
                             <span className='flex flex-col font-semibold text-5xl'>
@@ -125,7 +125,7 @@ const Hero = () => {
                         
                         <motion.p 
                             variants={itemVariants}
-                            className='text-[#272727] text-lg w-full font-medium mt-3'
+                            className='text-[#272727] text-lg w-full font-medium mt-3 font-poppins'
                         >
                             Get a car where and whenever you need it with your iOS and Android device
                         </motion.p>
