@@ -84,7 +84,7 @@ const Hero = () => {
 
 
     return ( 
-        <div className='overflow-hidden py-5 flex flex-col gap-2 relative'>
+        <div className='overflow-hidden py-5 flex flex-col gap-2 relative mix-blend-normal m-0 '>
             <Nav/>
             
             {/* Main hero part */}
@@ -222,7 +222,7 @@ const Hero = () => {
             <motion.img 
                 src={zbg2} 
                 alt="Decorative background element"
-                className="absolute -right-0 -bottom-0 w-50 h-50 object-cover filter blur-xs"
+                className="absolute -right-0 -bottom-0 w-50 h-50 object-cover filter blur-xs mix-blend-overlay"
                 initial="hidden"
                 animate="visible"
                 variants={rightImageVariants}
