@@ -6,6 +6,8 @@ import google from "../assets/image 2.png";
 import ios from "../assets/image 3.png";
 import z from '../assets/z.png';
 import Locator from './locator';
+import zbg from '../assets/bakcgroundLayer.png'
+import zbg2 from "../assets/Untitled-1 4.png"
 
 const Hero = () => {
     // Animation variants
@@ -55,8 +57,34 @@ const Hero = () => {
         }
     };
 
+    const leftImageVariants = {
+        hidden: { x: -100, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                duration: 1,
+                ease: "easeOut"
+            }
+        }
+    };
+
+    const rightImageVariants = {
+        hidden: { x: 100, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                duration: 1,
+                delay: 0.3,
+                ease: "easeOut"
+            }
+        }
+    };
+
+
     return ( 
-        <div className='overflow-hidden py-5 flex flex-col gap-2'>
+        <div className='overflow-hidden py-5 flex flex-col gap-2 relative'>
             <Nav/>
             
             {/* Main hero part */}
@@ -182,6 +210,24 @@ const Hero = () => {
             
             {/* Locator */}
             <Locator/>
+            <motion.img 
+                src={zbg} 
+                alt="Decorative background element"
+                className="absolute -left-28 -bottom-15 w-70 h-70 object-cover filter blur-sm"
+                initial="hidden"
+                animate="visible"
+                variants={leftImageVariants}
+                whileHover={{ opacity: 0.9 }}
+            />
+            <motion.img 
+                src={zbg2} 
+                alt="Decorative background element"
+                className="absolute -right-0 -bottom-0 w-50 h-50 object-cover filter blur-xs"
+                initial="hidden"
+                animate="visible"
+                variants={rightImageVariants}
+                whileHover={{ opacity: 0.9 }}
+            />
         </div>
     );
 }
