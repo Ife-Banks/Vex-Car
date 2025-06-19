@@ -54,35 +54,35 @@ const Choose = () => {
 
   return (
     <motion.div 
-      className='py-10 flex justify-between gap-3 items-center'
+      className='py-10 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-start gap-8 items-center max-w-7xl mx-auto'
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={container}
     >
       {/* Left side with images */}
-      <div className='w-[50%] relative flex items-start justify-start'>
+      <div className='w-full lg:w-[50%] relative flex items-center justify-center lg:justify-start'>
         <motion.img 
           src={whiteCar} 
           alt="White car" 
-          className='w-150 absolute -left-10' 
+          className='w-full max-w-[500px] lg:max-w-none lg:w-[100%] relative lg:absolute lg:-left-25' 
           variants={carImage}
         />
         <motion.img 
           src={lighting}
-          className="absolute inset-y-0 -left-30 -top-10 w-80 h-80 object-cover filter blur-sm z-9 -rotate-5"
+          className="hidden lg:block absolute inset-y-0 -left-45 -top-40 w-80 h-80 object-cover filter blur-sm z-9 -rotate-5"
           variants={lightingEffect}
         />
       </div>
       
       {/* Right side with content */}
       <motion.div 
-        className='w-[40%] mx-auto flex flex-col gap-5'
+        className='w-full lg:w-[40%] flex flex-col gap-5'
         variants={container}
       >
-        {/* "How it Works" tag */}
+        {/* "Why choose us" tag */}
         <motion.div 
-          className='purpleTitle'
+          className='text-[#A020F0] font-medium text-sm uppercase tracking-wider'
           variants={item}
         >
           <p>Why choose us</p>
@@ -90,27 +90,27 @@ const Choose = () => {
         
         {/* Main heading */}
         <motion.div 
-          className='w-[70%]'
+          className='w-full lg:w-[70%]'
           variants={item}
         >
-          <h1 className='text-[#333] font-space text-4xl font-medium text-left leading-13'>
+          <h1 className='text-[#333] font-space text-2xl sm:text-3xl md:text-4xl font-medium text-left leading-tight'>
             We offer the best experience with our rental deals
           </h1>
         </motion.div>
         
         {/* Features list */}
         <motion.div 
-          className='flex flex-col gap-7'
+          className='flex flex-col gap-5 sm:gap-7'
           variants={container}
         >
           {/* Feature 1 */}
           <motion.div 
-            className='flex gap-5 items-center'
+            className='flex gap-4 sm:gap-5 items-start sm:items-center'
             variants={item}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <div className='rounded-[8px] bg-[rgba(21,114,211,0.1)] w-fit p-3 items-center flex'>
+            <div className='rounded-lg bg-[rgba(160,32,240,0.1)] w-fit p-3 items-center flex flex-shrink-0'>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M11.94 2.21001L9.53 7.82001H7.12C6.72 7.82001 6.33 7.85001 5.95 7.93001L6.95 5.53001L6.99 5.44001L7.05 5.28001C7.08 5.21001 7.1 5.15001 7.13 5.10001C8.29 2.41001 9.59 1.57001 11.94 2.21001Z" fill="#A020F0"/>
                 <path d="M18.73 8.09002L18.71 8.08002C18.11 7.91002 17.5 7.82002 16.88 7.82002H10.62L12.87 2.59002L12.9 2.52002C13.04 2.57002 13.19 2.64002 13.34 2.69002L15.55 3.62002C16.78 4.13002 17.64 4.66002 18.17 5.30002C18.26 5.42002 18.34 5.53002 18.42 5.66002C18.51 5.80002 18.58 5.94002 18.62 6.09002C18.66 6.18002 18.69 6.26002 18.71 6.35002C18.86 6.86002 18.87 7.44002 18.73 8.09002Z" fill="#A020F0"/>
@@ -119,20 +119,22 @@ const Choose = () => {
                 <path d="M10.68 14.14C10.68 14.56 10.8 14.62 11.06 14.72L11.48 14.87V13.54H11.23C10.92 13.54 10.68 13.81 10.68 14.14Z" fill="#A020F0"/>
               </svg>
             </div>
-            <div className='flex flex-col gap-2'>
-              <h1 className='title'>Best price guaranteed</h1>
-              <p className='descrip text-left w-[75%]'>Find a lower price? We'll refund you 100% of the difference</p>
+            <div className='flex flex-col gap-1 sm:gap-2'>
+              <h1 className='text-lg font-semibold text-[#333]'>Best price guaranteed</h1>
+              <p className='text-sm sm:text-base text-[#595959] text-left'>
+                Find a lower price? We'll refund you 100% of the difference
+              </p>
             </div>
           </motion.div>
           
           {/* Feature 2 */}
           <motion.div 
-            className='flex gap-5 items-center'
+            className='flex gap-4 sm:gap-5 items-start sm:items-center'
             variants={item}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <div className='rounded-[8px] bg-[rgba(21,114,211,0.1)] w-fit p-3 items-center flex'>
+            <div className='rounded-lg bg-[rgba(160,32,240,0.1)] w-fit p-3 items-center flex flex-shrink-0'>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M11.94 2.21001L9.53 7.82001H7.12C6.72 7.82001 6.33 7.85001 5.95 7.93001L6.95 5.53001L6.99 5.44001L7.05 5.28001C7.08 5.21001 7.1 5.15001 7.13 5.10001C8.29 2.41001 9.59 1.57001 11.94 2.21001Z" fill="#A020F0"/>
                 <path d="M18.73 8.09002L18.71 8.08002C18.11 7.91002 17.5 7.82002 16.88 7.82002H10.62L12.87 2.59002L12.9 2.52002C13.04 2.57002 13.19 2.64002 13.34 2.69002L15.55 3.62002C16.78 4.13002 17.64 4.66002 18.17 5.30002C18.26 5.42002 18.34 5.53002 18.42 5.66002C18.51 5.80002 18.58 5.94002 18.62 6.09002C18.66 6.18002 18.69 6.26002 18.71 6.35002C18.86 6.86002 18.87 7.44002 18.73 8.09002Z" fill="#A020F0"/>
@@ -141,20 +143,22 @@ const Choose = () => {
                 <path d="M10.68 14.14C10.68 14.56 10.8 14.62 11.06 14.72L11.48 14.87V13.54H11.23C10.92 13.54 10.68 13.81 10.68 14.14Z" fill="#A020F0"/>
               </svg>
             </div>
-            <div className='flex flex-col gap-2'>
-              <h1 className='title'>Easy cancellation</h1>
-              <p className='descrip text-left w-[75%]'>Flexible plans that allow you to cancel anytime</p>
+            <div className='flex flex-col gap-1 sm:gap-2'>
+              <h1 className='text-lg font-semibold text-[#333]'>Easy cancellation</h1>
+              <p className='text-sm sm:text-base text-[#595959] text-left'>
+                Flexible plans that allow you to cancel anytime
+              </p>
             </div>
           </motion.div>
           
           {/* Feature 3 */}
           <motion.div 
-            className='flex gap-5 items-center'
+            className='flex gap-4 sm:gap-5 items-start sm:items-center'
             variants={item}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <div className='rounded-[8px] bg-[rgba(21,114,211,0.1)] w-fit p-3 items-center flex'>
+            <div className='rounded-lg bg-[rgba(160,32,240,0.1)] w-fit p-3 items-center flex flex-shrink-0'>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M11.94 2.21001L9.53 7.82001H7.12C6.72 7.82001 6.33 7.85001 5.95 7.93001L6.95 5.53001L6.99 5.44001L7.05 5.28001C7.08 5.21001 7.1 5.15001 7.13 5.10001C8.29 2.41001 9.59 1.57001 11.94 2.21001Z" fill="#A020F0"/>
                 <path d="M18.73 8.09002L18.71 8.08002C18.11 7.91002 17.5 7.82002 16.88 7.82002H10.62L12.87 2.59002L12.9 2.52002C13.04 2.57002 13.19 2.64002 13.34 2.69002L15.55 3.62002C16.78 4.13002 17.64 4.66002 18.17 5.30002C18.26 5.42002 18.34 5.53002 18.42 5.66002C18.51 5.80002 18.58 5.94002 18.62 6.09002C18.66 6.18002 18.69 6.26002 18.71 6.35002C18.86 6.86002 18.87 7.44002 18.73 8.09002Z" fill="#A020F0"/>
@@ -163,9 +167,11 @@ const Choose = () => {
                 <path d="M10.68 14.14C10.68 14.56 10.8 14.62 11.06 14.72L11.48 14.87V13.54H11.23C10.92 13.54 10.68 13.81 10.68 14.14Z" fill="#A020F0"/>
               </svg>
             </div>
-            <div className='flex flex-col gap-2'>
-              <h1 className='title'>Premium vehicles</h1>
-              <p className='descrip text-left w-[75%]'>Top-quality cars maintained to the highest standards</p>
+            <div className='flex flex-col gap-1 sm:gap-2'>
+              <h1 className='text-lg font-semibold text-[#333]'>Premium vehicles</h1>
+              <p className='text-sm sm:text-base text-[#595959] text-left'>
+                Top-quality cars maintained to the highest standards
+              </p>
             </div>
           </motion.div>
         </motion.div>

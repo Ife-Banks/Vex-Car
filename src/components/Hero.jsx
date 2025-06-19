@@ -6,8 +6,8 @@ import google from "../assets/image 2.png";
 import ios from "../assets/image 3.png";
 import z from '../assets/z.png';
 import Locator from './locator';
-import zbg from '../assets/bakcgroundLayer.png'
-import zbg2 from "../assets/Untitled-1 4.png"
+import zbg from '../assets/bakcgroundLayer.png';
+import zbg2 from "../assets/Untitled-1 4.png";
 
 const Hero = () => {
     // Animation variants
@@ -82,9 +82,8 @@ const Hero = () => {
         }
     };
 
-
     return ( 
-        <div className='overflow-hidden py-5 flex flex-col gap-2 relative mix-blend-normal m-0 '>
+        <div className='overflow-hidden py-5 flex flex-col gap-2 relative mix-blend-normal m-0 px-4 sm:px-6 lg:px-8'>
             <Nav/>
             
             {/* Main hero part */}
@@ -92,46 +91,46 @@ const Hero = () => {
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
-                className='flex items-center gap-15 justify-end m-0 p-0'
+                className='flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto'
             >
                 {/* Text area */}
                 <motion.div 
                     variants={containerVariants}
-                    className='w-[35%] flex p-1 -mt-5'
+                    className='w-full lg:w-[35%] flex p-1 mt-0 lg:-mt-5 lg:ml-30'
                 >
-                    <motion.div variants={itemVariants} className='w-10'>
+                    <motion.div variants={itemVariants} className='w-10 hidden lg:block'>
                         <LazyLoadImage 
                             src={z} 
                             alt="Decoration" 
-                            className='h-6  mt-3 '
+                            className='h-6 mt-3'
                             effect="opacity"
                         />
                     </motion.div>
                     
-                    <div className='flex flex-col '>
+                    <div className='flex flex-col w-full'>
                         <motion.div 
                             variants={itemVariants}
-                            className='flex '
+                            className='flex flex-wrap'
                         > 
-                            <h1 className='text-[#242424] font-semibold text-5xl font-space'>
-                                Find, book and 
+                            <h1 className='text-[#242424] font-semibold text-3xl sm:text-4xl md:text-5xl font-space leading-tight'>
+                                Find, book and
                             </h1>
                             <LazyLoadImage 
                                 src={z} 
                                 alt="Decoration" 
-                                className='h-6 mt-4'
+                                className='h-6 mt-3 sm:mt-4 hidden lg:block'
                                 effect="opacity"
                             />
                         </motion.div>
                         
                         <motion.div 
                             variants={itemVariants}
-                            className='flex gap-2'
+                            className='flex flex-wrap gap-2 items-end'
                         >
-                            <p className='text-[#242424] font-semibold text-5xl font-space'>
+                            <p className='text-[#242424] font-semibold text-3xl sm:text-4xl md:text-5xl font-space leading-tight'>
                                 rent a car
                             </p> 
-                            <span className='flex flex-col font-semibold text-5xl'>
+                            <span className='flex flex-col font-semibold text-3xl sm:text-4xl md:text-5xl'>
                                 <motion.p 
                                     variants={itemVariants}
                                     className='text-[#A020F0]'
@@ -143,6 +142,7 @@ const Hero = () => {
                                     variants={underlineVariants}
                                     initial="hidden"
                                     animate="visible"
+                                    className='hidden sm:block'
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" viewBox="0 0 135 20" fill="none">
                                         <path d="M134.398 2.4454C57.1256 -2.591 23.8505 5.91265 1.51269 9.43271C1.16554 12.3701 1.29738 14.786 0.927661 19.4527C60.8229 -0.00292444 100.753 3.19434 134.353 4.43374C134.367 4.06427 134.357 3.55381 134.398 2.4454Z" fill="#A020F0"/>
@@ -153,7 +153,7 @@ const Hero = () => {
                         
                         <motion.p 
                             variants={itemVariants}
-                            className='text-[#272727] text-lg w-full font-medium mt-3 font-poppins'
+                            className='text-[#272727] text-base sm:text-lg w-full font-medium mt-3 font-poppins'
                         >
                             Get a car where and whenever you need it with your iOS and Android device
                         </motion.p>
@@ -161,18 +161,19 @@ const Hero = () => {
                         {/* Buttons wrapper */}
                         <motion.div 
                             variants={containerVariants}
-                            className='flex gap-3 mt-5'
+                            className='flex gap-3 mt-5 flex-wrap'
                         >
                             {/* Google Play button */}
                             <motion.a 
                                 variants={itemVariants}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                className='w-32 sm:w-40'
                             >
                                 <LazyLoadImage 
                                     src={google} 
                                     alt="Get on Google Play" 
-                                    className='w-40'
+                                    className='w-full'
                                     effect="opacity"
                                 />
                             </motion.a>
@@ -182,11 +183,12 @@ const Hero = () => {
                                 variants={itemVariants}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                className='w-32 sm:w-40'
                             >
                                 <LazyLoadImage 
                                     src={ios} 
                                     alt="Download on the App Store" 
-                                    className='w-40'
+                                    className='w-full'
                                     effect="opacity"
                                 />
                             </motion.a>
@@ -194,26 +196,30 @@ const Hero = () => {
                     </div>
                 </motion.div>
                 
-                {/* Car image */}
+                {/* Car image - maintains positioning on desktop */}
                 <motion.div 
                     variants={imageVariants}
-                    className='p-0 m-0 -mr-33 pl-20'
+                    className='w-full lg:w-auto p-0 m-0 lg:-mr-40  lg:pl-20 mt-8 lg:mt-0'
                 >
-                    <img 
+                    <LazyLoadImage 
                         src={VioletCar} 
                         alt="Luxury car for rent" 
-                        className='object-cover w-full max-w-[800px] h-auto'
+                        className='object-contain w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[800px] h-auto mx-auto lg:mx-0 ' 
                         effect="opacity"
                     />
                 </motion.div>
             </motion.div>
             
             {/* Locator */}
-            <Locator/>
+            <div className='w-full max-w-7xl mx-auto'>
+                <Locator/>
+            </div>
+            
+            {/* Decorative background elements */}
             <motion.img 
                 src={zbg} 
                 alt="Decorative background element"
-                className="absolute -left-28 -bottom-15 w-70 h-70 object-cover filter blur-sm"
+                className="absolute -left-30 -bottom-15 w-40 h-40 sm:w-70 sm:h-70 object-cover filter blur-sm -z-10"
                 initial="hidden"
                 animate="visible"
                 variants={leftImageVariants}
@@ -222,7 +228,7 @@ const Hero = () => {
             <motion.img 
                 src={zbg2} 
                 alt="Decorative background element"
-                className="absolute -right-0 -bottom-0 w-50 h-50 object-cover filter blur-xs mix-blend-overlay"
+                className="absolute right-0 -bottom-0 w-30 h-30 sm:w-50 sm:h-50 object-cover filter blur-xs mix-blend-overlay -z-10"
                 initial="hidden"
                 animate="visible"
                 variants={rightImageVariants}

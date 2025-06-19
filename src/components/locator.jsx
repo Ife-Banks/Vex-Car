@@ -44,7 +44,7 @@ const Locator = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={containerVariants}
-            className='text-black flex flex-col md:flex-row gap-5 md:gap-10 w-[95%] md:w-[85%] lg:w-[75%] mx-auto p-4 shadow-[0px_6px_12px_0px_rgba(19,94,172,0.12)] rounded-xl bg-white justify-between'
+            className='text-black flex flex-col md:flex-row gap-5 md:gap-10 w-[95%] md:w-[85%] lg:w-[75%] mx-auto p-4 shadow-[0px_6px_12px_0px_rgba(19,94,172,0.12)] rounded-xl bg-white justify-between z-1'
         >
             {/* Location selector */}
             <motion.div 
