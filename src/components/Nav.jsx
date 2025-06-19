@@ -55,7 +55,7 @@ const Nav = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="flex items-center w-full px-4 sm:px-6 lg:px-8 xl:w-[75%] mx-auto justify-between font-poppins py-4"
+            className="flex items-center w-full px-4 sm:px-6 lg:px-8 xl:w-[80%] mx-auto justify-between font-poppins py-4"
         >
             {/* Logo Section */}
             <motion.div 

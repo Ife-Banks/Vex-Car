@@ -99,7 +99,7 @@ const Work = () => {
             >
                 <motion.span 
                     whileHover={{ scale: 1.05 }}
-                    className='purpleTitle'
+                    className='text-[#A020F0] px-5 py-2 rounded-[8px] bg-[rgba(21,114,211,0.1)] w-fit'
                 >
                     <p>How it Works</p>
                 </motion.span>
@@ -107,7 +107,7 @@ const Work = () => {
                     variants={itemVariants}
                     className='w-auto'
                 >
-                    <h2 className='subTitle'>
+                    <h2 className='subTitle '>
                         Rent with following 3 working steps
                     </h2>
                 </motion.div>
@@ -116,7 +116,7 @@ const Work = () => {
             {/* Steps cards */}
             <motion.div 
                 variants={containerVariants}
-                className='flex w-[50%] items-center justify-evenly gap-10'
+                className='flex w-[80%] lg:w-[50%] flex-wrap md:flex-nowrap mx-auto items-center justify-evenly gap-10 '
             >
                 {steps.map((step, index) => (
                     <motion.div
@@ -135,7 +135,7 @@ const Work = () => {
                             <h1 className='title'>
                                 {step.title}
                             </h1>
-                            <p className='descrip text-center w-[80%]'>
+                            <p className='descrip text-center '>
                                 {step.description}
                             </p>
                         </div>

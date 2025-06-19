@@ -44,12 +44,12 @@ const Locator = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={containerVariants}
-            className='text-black flex gap-10 w-[75%] mx-auto p-2 m-0 shadow-[0px_6px_12px_0px_rgba(19,94,172,0.12)] rounded-xl bg-white justify-between'
+            className='text-black flex flex-col md:flex-row gap-5 md:gap-10 w-[95%] md:w-[85%] lg:w-[75%] mx-auto p-4 shadow-[0px_6px_12px_0px_rgba(19,94,172,0.12)] rounded-xl bg-white justify-between'
         >
             {/* Location selector */}
             <motion.div 
                 variants={itemVariants}
-                className='flex h-10 items-center gap-3 w-[20%]'
+                className='flex items-center gap-3 w-full md:w-[20%]'
             >
                 <motion.img 
                     src={locator} 
@@ -57,8 +57,8 @@ const Locator = () => {
                     className='w-10'
                     whileHover={{ scale: 1.1 }}
                 />
-                <div className='h-auto flex flex-col w-[90%]'>
-                    <h3 className='text-[#3E3E3E] font-poppins text-lg font-medium'>Location</h3>
+                <div className='flex flex-col'>
+                    <h3 className='text-[#3E3E3E] font-poppins text-base md:text-lg font-medium'>Location</h3>
                     <p className='text-sm font-medium text-[#B6B6B6] font-poppins'>Search your Location</p>
                 </div>
             </motion.div>
@@ -66,7 +66,7 @@ const Locator = () => {
             {/* Pickup date */}
             <motion.div 
                 variants={itemVariants}
-                className='flex h-10 items-center gap-3 w-[20%] border-l-2 border-l-[#ACACAC] pl-3'
+                className='flex items-center gap-3 w-full md:w-[20%] border-t-2 md:border-t-0 md:border-l-2 border-[#ACACAC] pt-3 md:pt-0 md:pl-3'
             >
                 <motion.img 
                     src={calendar} 
@@ -74,8 +74,8 @@ const Locator = () => {
                     className='w-10'
                     whileHover={{ scale: 1.1 }}
                 />
-                <div className='h-auto flex flex-col w-[90%]'>
-                    <h3 className='text-[#3E3E3E] font-poppins text-lg font-medium'>Pickup date</h3>
+                <div className='flex flex-col'>
+                    <h3 className='text-[#3E3E3E] font-poppins text-base md:text-lg font-medium'>Pickup date</h3>
                     <p className='text-sm font-medium text-[#B6B6B6] font-poppins'>Tue 15 Feb, 09:00</p>
                 </div>
             </motion.div>
@@ -83,7 +83,7 @@ const Locator = () => {
             {/* Return date */}
             <motion.div 
                 variants={itemVariants}
-                className='flex h-10 items-center gap-3 w-[20%] border-l-2 border-l-[#ACACAC] pl-3'
+                className='flex items-center gap-3 w-full md:w-[20%] border-t-2 md:border-t-0 md:border-l-2 border-[#ACACAC] pt-3 md:pt-0 md:pl-3'
             >
                 <motion.img 
                     src={calendar} 
@@ -91,8 +91,8 @@ const Locator = () => {
                     className='w-10'
                     whileHover={{ scale: 1.1 }}
                 />
-                <div className='h-auto flex flex-col w-[90%]'>
-                    <h3 className='text-[#3E3E3E] font-poppins text-lg font-medium'>Return date</h3>
+                <div className='flex flex-col'>
+                    <h3 className='text-[#3E3E3E] font-poppins text-base md:text-lg font-medium'>Return date</h3>
                     <p className='text-sm font-medium text-[#B6B6B6] font-poppins'>Thu 16 Feb, 11:00</p>
                 </div>
             </motion.div>
@@ -103,7 +103,7 @@ const Locator = () => {
                 whileHover="hover"
                 whileTap="tap"
                 type="button"
-                className='shadow-md bg-[#A020F0] text-white px-10 py-2 items-center rounded-lg cursor-pointer self-center'
+                className='shadow-md bg-[#A020F0] text-white px-6 py-2 rounded-lg cursor-pointer self-start md:self-center w-full md:w-auto text-center'
                 variants={buttonVariants}
             >
                 Search
@@ -111,5 +111,5 @@ const Locator = () => {
         </motion.div>
     );
 };
- 
+
 export default Locator;
