@@ -99,7 +99,7 @@ const Work = () => {
             >
                 <motion.span 
                     whileHover={{ scale: 1.05 }}
-                    className='text-[#A020F0] px-5 py-2 rounded-[8px] bg-[rgba(21,114,211,0.1)] w-fit'
+                    className='purpleTitle'
                 >
                     <p>How it Works</p>
                 </motion.span>
@@ -107,7 +107,7 @@ const Work = () => {
                     variants={itemVariants}
                     className='w-auto'
                 >
-                    <h2 className='text-[#333] font-space text-center text-2xl font-medium'>
+                    <h2 className='subTitle'>
                         Rent with following 3 working steps
                     </h2>
                 </motion.div>

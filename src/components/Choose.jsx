@@ -82,10 +82,10 @@ const Choose = () => {
       >
         {/* "How it Works" tag */}
         <motion.div 
-          className='text-[#A020F0] px-5 py-2 rounded-[8px] bg-[rgba(21,114,211,0.1)] w-fit'
+          className='purpleTitle'
           variants={item}
         >
-          <p>How it Works</p>
+          <p>Why choose us</p>
         </motion.div>
         
         {/* Main heading */}
