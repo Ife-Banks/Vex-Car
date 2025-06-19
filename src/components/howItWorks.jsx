@@ -132,10 +132,10 @@ const Work = () => {
                             {step.icon}
                         </motion.div>
                         <div className='text-black flex flex-col items-center gap-3'>
-                            <h1 className='text-[#000] font-poppins text-lg font-medium'>
+                            <h1 className='title'>
                                 {step.title}
                             </h1>
-                            <p className='text-[#6D6D6D] text-center font-poppins text-sm w-[80%]'>
+                            <p className='descrip text-center w-[80%]'>
                                 {step.description}
                             </p>
                         </div>

@@ -18,3 +18,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.title {
+  @apply text-[#000] font-poppins text-lg font-medium;
+}
+.descrip{
+  @apply text-[#6D6D6D]  font-poppins text-sm ;
+}
