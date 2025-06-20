@@ -201,7 +201,7 @@ const Hero = () => {
                     variants={imageVariants}
                     className='w-full lg:w-auto p-0 m-0 lg:-mr-40  lg:pl-20 mt-8 lg:mt-0'
                 >
-                    <LazyLoadImage 
+                    <img
                         src={VioletCar} 
                         alt="Luxury car for rent" 
                         className='object-contain w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[800px] h-auto mx-auto lg:mx-0 ' 
