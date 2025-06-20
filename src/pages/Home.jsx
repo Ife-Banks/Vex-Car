@@ -1,4 +1,5 @@
 import Choose from '../components/Choose';
+import Download from '../components/download';
 import Hero from '../components/Hero';
 import Work from '../components/howItWorks';
 import Logo from '../components/logo';
@@ -14,6 +15,7 @@ const Home = () => {
             <Choose/>
             <Popular/>
             <Testimony/>
+            <Download/>
         </>
      );
 }
