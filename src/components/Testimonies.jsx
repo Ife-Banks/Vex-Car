@@ -43,7 +43,7 @@ const Testimony = () => {
         hidden: { scale: 0, opacity: 0 },
         visible: {
             scale: 1,
-            opacity: 0.1,
+            opacity: 0.9,
             transition: {
                 duration: 1,
                 ease: "backOut"
@@ -118,7 +118,7 @@ const Testimony = () => {
                         <img 
                             src={man} 
                             alt="Jenny Wilson" 
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover object-[25%_10%]"
                         />
                     </motion.div>
                     
@@ -173,7 +173,7 @@ const Testimony = () => {
                         <img 
                             src={woman} 
                             alt="Charlie Johnson" 
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover object-[25%_10%]"
                         />
                     </motion.div>
                     
