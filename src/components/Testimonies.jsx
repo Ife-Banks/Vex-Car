@@ -53,7 +53,7 @@ const Testimony = () => {
 
     return (  
         <motion.div 
-            className="bg-[#F9F0FF] pt-16 pb-20 relative overflow-hidden"
+            className="bg-[#F9F0FF] pt-16 pb-20 relative overflow-hidden mt-25"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
