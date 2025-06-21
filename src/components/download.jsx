@@ -132,7 +132,7 @@ const Download = () => {
 
             {/* Right Image */}
             <motion.div 
-                className='hidden md:block md:w-[50%]'
+                className=' md:block md:w-[50%]'
                 variants={phoneAnimation}
             >
                 <motion.img 
