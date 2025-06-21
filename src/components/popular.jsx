@@ -49,7 +49,8 @@ const Popular = () => {
   };
 
   return (  
-    <motion.div 
+    <motion.section
+      id='rental-deals'
       className='mt-10 flex flex-col gap-10 items-center justify-center px-4 sm:px-6 lg:px-8'
       initial="hidden"
       whileInView="visible"
@@ -140,7 +141,7 @@ const Popular = () => {
           </motion.div>
         ))}
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 }
 

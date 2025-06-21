@@ -44,11 +44,22 @@ const Nav = () => {
     };
 
     const navLinks = [
-        { text: "Become a renter", href: "#" },
-        { text: "Rental deals", href: "#" },
-        { text: "How it works", href: "#" },
-        { text: "Why choose us", href: "#" }
+        { text: "Become a renter", href: "become-renter" },
+        { text: "Rental deals", href: "rental-deals" },
+        { text: "How it works", href: "how-it-works" },
+        { text: "Why choose us", href: "why-choose-us" }
     ];
+
+    const handleScroll = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        setMobileMenuOpen(false);
+    };
 
     return (
         <motion.nav 
@@ -89,9 +100,12 @@ const Nav = () => {
                         whileHover={{ scale: 1.05, color: "#A020F0" }}
                         transition={{ duration: 0.2 }}
                     >
-                        <a href={link.href} className="transition-colors duration-200 text-sm lg:text-base">
+                        <button 
+                            onClick={() => handleScroll(link.href)}
+                            className="transition-colors duration-200 text-sm lg:text-base bg-transparent border-none cursor-pointer"
+                        >
                             {link.text}
-                        </a>
+                        </button>
                     </motion.li>
                 ))}
             </motion.ul>
@@ -158,14 +172,13 @@ const Nav = () => {
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1 }}
-                                    onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    <a 
-                                        href={link.href} 
-                                        className="text-black hover:text-[#A020F0] transition-colors duration-200"
+                                    <button 
+                                        onClick={() => handleScroll(link.href)}
+                                        className="text-black hover:text-[#A020F0] transition-colors duration-200 bg-transparent border-none text-left cursor-pointer text-xl"
                                     >
                                         {link.text}
-                                    </a>
+                                    </button>
                                 </motion.li>
                             ))}
                         </motion.ul>
@@ -175,7 +188,7 @@ const Nav = () => {
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: navLinks.length * 0.1 }}
-                                href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp/" 
+                                href="#" 
                                 className="text-black hover:text-[#A020F0] transition-colors duration-200 text-center py-3 border border-[#A020F0] rounded-lg"
                                 onClick={() => setMobileMenuOpen(false)}
                             >

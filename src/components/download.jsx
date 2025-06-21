@@ -53,7 +53,8 @@ const Download = () => {
     };
 
     return (  
-        <motion.div 
+        <motion.section 
+            id='become-renter'
             className='flex flex-col md:flex-row items-center justify-around py-10 md:py-0 md:h-100 px-4 md:px-20 overflow-hidden'
             initial="hidden"
             whileInView="visible"
@@ -144,7 +145,7 @@ const Download = () => {
                     animate="animate"
                 />
             </motion.div>
-        </motion.div>
+        </motion.section>
     );
 }
 

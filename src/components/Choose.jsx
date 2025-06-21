@@ -53,7 +53,8 @@ const Choose = () => {
   };
 
   return (
-    <motion.div 
+    <motion.section 
+      id='why-choose-us'
       className='py-10 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-start gap-8 items-center max-w-7xl mx-auto'
       initial="hidden"
       whileInView="visible"
@@ -176,7 +177,7 @@ const Choose = () => {
           </motion.div>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 }
 

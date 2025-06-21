@@ -75,11 +75,8 @@ const Work = () => {
     ];
 
     return (  
-        <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={containerVariants}
+        <section 
+            id="how-it-works"
             className='relative flex flex-col justify-center items-center py-20 gap-20 overflow-hidden mix-blend-color'
         >
             {/* Background decoration */}
@@ -94,10 +91,14 @@ const Work = () => {
 
             {/* Header section */}
             <motion.div 
-                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={containerVariants}
                 className='flex flex-col gap-5 items-center'
             >
                 <motion.span 
+                    variants={itemVariants}
                     whileHover={{ scale: 1.05 }}
                     className='text-[#A020F0] px-5 py-2 rounded-[8px] bg-[rgba(21,114,211,0.1)] w-fit'
                 >
@@ -107,7 +108,7 @@ const Work = () => {
                     variants={itemVariants}
                     className='w-auto'
                 >
-                    <h2 className='subTitle '>
+                    <h2 className='subTitle'>
                         Rent with following 3 working steps
                     </h2>
                 </motion.div>
@@ -115,8 +116,11 @@ const Work = () => {
 
             {/* Steps cards */}
             <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
                 variants={containerVariants}
-                className='flex w-[80%] lg:w-[50%] flex-wrap md:flex-nowrap mx-auto items-center justify-evenly gap-10 '
+                className='flex w-[80%] lg:w-[50%] flex-wrap md:flex-nowrap mx-auto items-center justify-evenly gap-10'
             >
                 {steps.map((step, index) => (
                     <motion.div
@@ -135,14 +139,14 @@ const Work = () => {
                             <h1 className='title'>
                                 {step.title}
                             </h1>
-                            <p className='descrip text-center '>
+                            <p className='descrip text-center'>
                                 {step.description}
                             </p>
                         </div>
                     </motion.div>
                 ))}
             </motion.div>
-        </motion.div>
+        </section>
     );
 }
  
