@@ -175,7 +175,7 @@ const Nav = () => {
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: navLinks.length * 0.1 }}
-                                href="#" 
+                                href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp/" 
                                 className="text-black hover:text-[#A020F0] transition-colors duration-200 text-center py-3 border border-[#A020F0] rounded-lg"
                                 onClick={() => setMobileMenuOpen(false)}
                             >

@@ -1,5 +1,6 @@
 import Choose from '../components/Choose';
 import Download from '../components/download';
+import Footer from '../components/footer';
 import Hero from '../components/Hero';
 import Work from '../components/howItWorks';
 import Logo from '../components/logo';
@@ -16,6 +17,7 @@ const Home = () => {
             <Popular/>
             <Testimony/>
             <Download/>
+            <Footer/>
         </>
      );
 }
